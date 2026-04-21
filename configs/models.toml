@@ -1,0 +1,15 @@
+# Role → model mapping
+
+[roles]
+classify = "ollama:llama3.1:8b"
+score_rationale = "ollama:llama3.1:8b"
+synthesize = "ollama:qwen2.5:14b"
+daily_digest = "ollama:qwen2.5:14b"
+# Heavy reasoning — routes to NIM if NVIDIA_NIM_API_KEY is set, otherwise falls back to ollama:qwen2.5:14b
+weekly_digest = "nim:nvidia/llama-3.1-nemotron-70b-instruct"
+preference_review = "nim:nvidia/llama-3.1-nemotron-70b-instruct"
+embed = "ollama:nomic-embed-text"
+
+[fallback]
+# When a nim:* role is requested but no API key is set, use this ollama model instead
+nim_fallback = "ollama:qwen2.5:14b"

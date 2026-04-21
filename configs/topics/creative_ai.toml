@@ -1,0 +1,100 @@
+[topic]
+id = "creative_ai"
+name = "Creative AI"
+description = """
+AI in film, games, music, visual arts, design, advertising, and creative tooling. Include: model releases in image/video/audio/3D, tooling and workflow discourse, artist perspectives on adoption and displacement, IP and legal friction, cross-industry adoption stories. Exclude: generic LLM benchmark chatter, enterprise AI sales news, breathless "AI will change everything" takes, VC-ecosystem gossip.
+"""
+
+[seeds.queries]
+# Used for search-based sources (Twitter, HN search)
+terms = [
+  "ComfyUI",
+  "Stable Diffusion",
+  "Sora",
+  "Flux",
+  "SDXL",
+  "Runway",
+  "AI film",
+  "AI music generation",
+  "Suno",
+  "Udio",
+  "generative 3D",
+  "AI game dev",
+  "ControlNet",
+  "AI VFX",
+  "AI concept art",
+]
+
+[seeds.reddit]
+subreddits = [
+  "aivideo",
+  "StableDiffusion",
+  "comfyui",
+  "LocalLLaMA",
+  "gamedev",
+  "proceduralgeneration",
+  "WeAreTheMusicMakers",
+  "blender",
+  "vfx",
+  "compositing",
+  "AIArtists",
+  "bigsleep",
+  "MediaSynthesis",
+  "creativecoding",
+  "AnimationCrew",
+]
+
+[seeds.rss]
+feeds = [
+  # Labs / research
+  "http://export.arxiv.org/rss/cs.GR",
+  "http://export.arxiv.org/rss/cs.SD",
+  "http://export.arxiv.org/rss/cs.CV",
+  # Aggregators / news
+  "https://www.creativebloq.com/feed",
+  "https://80.lv/feed",
+  "https://www.fxguide.com/feed/",
+  "https://aiartists.org/feed",
+  # Company blogs
+  "https://openai.com/blog/rss/",
+  "https://stability.ai/blog?format=rss",
+  "https://runwayml.com/blog/feed.xml",
+  "https://www.midjourney.com/rss.xml",
+  # YouTube channels (replace CHANNEL_ID with real IDs)
+  # "https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID",
+  # Substacks
+  "https://every.to/feed.xml",
+  "https://garymarcus.substack.com/feed",
+  "https://www.oneusefulthing.org/feed",
+  # Newsletters w/ RSS
+  "https://rundown.ai/feed",
+  "https://www.therundown.ai/feed",
+]
+
+[seeds.hackernews]
+# HN search keywords used in the Algolia search connector
+keywords = [
+  "stable diffusion",
+  "comfyui",
+  "generative video",
+  "AI music",
+  "procedural generation",
+  "generative 3D",
+]
+
+[seeds.twitter]
+# v0.2
+accounts = []
+lists = []
+search_queries = []
+
+[seeds.github]
+# v0.2
+watch_repos = [
+  "comfyanonymous/ComfyUI",
+  "Stability-AI/generative-models",
+  "Stability-AI/StableAudio",
+  "suno-ai/bark",
+  "lllyasviel/ControlNet",
+  "openai/sora",
+]

@@ -1,0 +1,58 @@
+# PulseClaw runtime config
+
+[server]
+host = "127.0.0.1"
+port = 7878
+
+[scheduler]
+# Baseline fetch interval per source, in minutes
+reddit_interval = 15
+rss_interval = 30
+hackernews_interval = 20
+# Pipeline runs after each fetch, plus every N minutes to catch stragglers
+pipeline_interval = 10
+
+[pipeline]
+# Drop items whose top topic match falls below this confidence
+classify_threshold = 0.55
+# Drop items whose final relevance falls below this
+relevance_threshold = 0.45
+# Near-duplicate detection window (days)
+dedupe_days = 14
+# Cosine similarity above which two items are considered duplicates
+dedupe_similarity = 0.92
+# Cluster event window (hours)
+cluster_window_hours = 48
+
+[scoring]
+# Weights — must sum to 1.0 after normalization inside score.py
+w_interest = 0.45
+w_ignore = 0.15
+w_source_trust = 0.1
+w_novelty = 0.15
+w_recency = 0.1
+w_engagement = 0.05
+
+[notify.tiers.realtime]
+relevance_min = 0.85
+engagement_velocity_z = 2.0
+cooldown_hours = 6
+
+[notify.tiers.hourly]
+relevance_min = 0.7
+max_items = 15
+
+[notify.tiers.daily]
+send_at_local = "08:00"
+top_n = 10
+
+[notify.tiers.weekly]
+send_at_local = "Sunday 18:00"
+
+[quiet_hours]
+# Local times during which only daily/weekly dispatch, no realtime or hourly
+start = "22:00"
+end = "07:00"
+
+[topics]
+active = ["creative_ai"]
