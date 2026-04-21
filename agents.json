@@ -1,7 +1,7 @@
 {
-  "name": "pulse",
+  "name": "pulseclaw",
   "version": "0.1.0",
-  "description": "Self-hosted notification agent that turns signal into expertise across social and community sources.",
+  "description": "Self-hosted notification agent. Speed of knowledge acquisition is the durable edge.",
   "identity": "IDENTITY.md",
   "soul": "SOUL.md",
   "agents_instructions": "AGENTS.md",
@@ -21,7 +21,7 @@
   "runtime": {
     "workspace": ".",
     "sidecar": {
-      "command": "uv run pulse server",
+      "command": "uv run pulseclaw server",
       "base_url": "http://127.0.0.1:7878"
     }
   },

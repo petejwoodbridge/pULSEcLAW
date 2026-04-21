@@ -23,7 +23,7 @@ services:
       - ntfy:/var/cache/ntfy
     restart: unless-stopped
 
-  pulse:
+  pulseclaw:
     build: .
     depends_on:
       - ollama
