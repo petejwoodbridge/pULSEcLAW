@@ -49,12 +49,12 @@ Deferred to v0.2: Twitter, LinkedIn, GitHub, Discord, weekly review generation, 
 ## Stack
 
 - **Agent framework**: OpenClaw (workspace-native — SOUL.md, skills directory, agents.json).
-- **Runtime**: Python 3.12 via `uv`.
+- **Runtime**: Python 3.12 via `uv`. Single process, no containers.
 - **Models**: Ollama (`llama3.1:8b` routing/classify, `qwen2.5:14b` synthesis, `nomic-embed-text` embeddings). Optional NIM (`nvidia/llama-3.1-nemotron-70b-instruct`) for weekly digest and preference review.
 - **Storage**: SQLite (source of truth) + LanceDB (vector index).
 - **UI**: FastAPI + HTMX. Dark, monospace, no SaaS garnish.
 - **Scheduler**: APScheduler.
-- **Notifications**: ntfy (self-hosted) + `plyer` desktop fallback.
+- **Notifications**: ntfy (self-hosted or ntfy.sh) + `plyer` desktop fallback.
 
 ## Setup
 
