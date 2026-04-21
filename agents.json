@@ -1,0 +1,29 @@
+{
+  "name": "pulse",
+  "version": "0.1.0",
+  "description": "Self-hosted notification agent that turns signal into expertise across social and community sources.",
+  "identity": "IDENTITY.md",
+  "soul": "SOUL.md",
+  "agents_instructions": "AGENTS.md",
+  "tools": "TOOLS.md",
+  "user_profile": "USER.md",
+  "skills_dir": "skills",
+  "skills": [
+    "classify_item",
+    "score_item",
+    "cluster_synthesize",
+    "generate_daily_digest",
+    "generate_weekly_digest",
+    "run_preference_review",
+    "fetch_source",
+    "export_data"
+  ],
+  "runtime": {
+    "workspace": ".",
+    "sidecar": {
+      "command": "uv run pulse server",
+      "base_url": "http://127.0.0.1:7878"
+    }
+  },
+  "topics": ["creative_ai"]
+}
